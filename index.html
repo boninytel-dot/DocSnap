@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — DocSnap</title>
+<style>
+  :root {
+    --primary: #1565C0;
+    --primary-dark: #0D47A1;
+    --accent: #00B0FF;
+    --bg: #F5F7FA;
+    --surface: #FFFFFF;
+    --text: #1A1A2E;
+    --secondary-text: #5B6472;
+    --border: #E0E0E0;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: #fff;
+    padding: 32px 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 0.02em;
+  }
+
+  header p {
+    margin: 6px 0 0;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+  }
+
+  /* ── Sélecteur de langue (sans JS, via radios cachées) ── */
+  .lang-switch {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: -20px auto 28px;
+    max-width: 760px;
+    padding: 0 20px;
+  }
+
+  .lang-switch input { display: none; }
+
+  .lang-switch label {
+    flex: 1;
+    text-align: center;
+    padding: 10px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--secondary-text);
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+
+  #lang-fr:checked ~ .lang-switch label[for="lang-fr"],
+  #lang-en:checked ~ .lang-switch label[for="lang-en"] {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+
+  #content-fr, #content-en { display: none; }
+  #lang-fr:checked ~ .container #content-fr,
+  #lang-en:checked ~ .container #content-en { display: block; }
+
+  .card {
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    padding: 24px 28px;
+    margin-bottom: 16px;
+  }
+
+  .card h2 {
+    margin-top: 0;
+    font-size: 1.15rem;
+    color: var(--primary-dark);
+  }
+
+  .card p, .card li { color: var(--text); }
+
+  .updated {
+    text-align: center;
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+    margin: 18px 0 24px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 0.92rem;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  th {
+    color: var(--secondary-text);
+    font-weight: 600;
+    width: 38%;
+  }
+
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  footer {
+    text-align: center;
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+    padding-bottom: 30px;
+  }
+</style>
+</head>
+<body>
+
+<input type="radio" name="lang" id="lang-fr" checked>
+<input type="radio" name="lang" id="lang-en">
+
+<header>
+  <h1>DocSnap</h1>
+  <p>Politique de confidentialité · Privacy Policy</p>
+</header>
+
+<div class="lang-switch">
+  <label for="lang-fr">🇫🇷 Français</label>
+  <label for="lang-en">🇬🇧 English</label>
+</div>
+
+<div class="container">
+
+  <!-- ══════════════════════════ FRANÇAIS ══════════════════════════ -->
+  <div id="content-fr">
+    <p class="updated">Dernière mise à jour : 14 juin 2026</p>
+
+    <div class="card">
+      <p>DocSnap (« l'Application ») est développée par <strong>BoninyDev (Boniny Développement)</strong>, développeur indépendant basé en France. Cette politique explique quelles informations sont traitées lorsque vous utilisez DocSnap, et comment elles sont utilisées.</p>
+    </div>
+
+    <div class="card">
+      <h2>1. Aucune collecte de données personnelles par DocSnap</h2>
+      <p>DocSnap fonctionne presque entièrement en local, sur votre appareil :</p>
+      <ul>
+        <li>Les photos et documents que vous scannez, recadrez, filtrez ou convertissez sont traités directement sur votre téléphone.</li>
+        <li>Les fichiers générés (PDF, JPG, PNG, WebP, fichiers texte OCR) sont enregistrés dans le stockage de votre appareil ou dans le dossier que vous choisissez vous-même dans les paramètres.</li>
+        <li>L'historique de vos documents est stocké localement dans une base de données sur votre appareil et n'est jamais transmis à BoninyDev ni à un serveur distant.</li>
+        <li>La reconnaissance de texte (OCR) est effectuée intégralement sur l'appareil grâce à Google ML Kit, sans envoi d'image vers un serveur.</li>
+        <li>Vos préférences (langue, mode accessibilité, dossier d'enregistrement) sont enregistrées localement sur votre appareil.</li>
+      </ul>
+      <p><strong>BoninyDev n'a accès à aucune de ces données.</strong></p>
+    </div>
+
+    <div class="card">
+      <h2>2. Publicités (Google AdMob)</h2>
+      <p>DocSnap affiche des bannières publicitaires fournies par <strong>Google AdMob</strong>, ce qui permet de proposer l'application gratuitement.</p>
+      <p>Pour afficher des publicités, Google AdMob (et ses partenaires publicitaires) peut collecter :</p>
+      <ul>
+        <li>L'identifiant publicitaire de votre appareil (Advertising ID) ;</li>
+        <li>Des informations générales sur votre appareil et votre utilisation de l'application, à des fins de mesure et de personnalisation des publicités.</li>
+      </ul>
+      <p>Ces informations sont collectées et traitées par Google conformément à sa propre politique de confidentialité : <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+      <p>Vous pouvez gérer vos préférences publicitaires (réinitialiser ou supprimer votre identifiant publicitaire, limiter le suivi) directement dans les paramètres de votre appareil Android, sous <em>Confidentialité &gt; Publicité</em>.</p>
+    </div>
+
+    <div class="card">
+      <h2>3. Permissions utilisées par l'application</h2>
+      <table>
+        <tr><th>Permission</th><td>Utilisation</td></tr>
+        <tr><th>Appareil photo</th><td>Pour photographier vos documents.</td></tr>
+        <tr><th>Photos / Stockage</th><td>Pour importer des images depuis votre galerie et enregistrer les fichiers générés.</td></tr>
+        <tr><th>Vibration</th><td>Pour le mode accessibilité « malentendant » (retours haptiques au lieu de sons).</td></tr>
+        <tr><th>Internet</th><td>Requis pour charger et afficher les publicités AdMob.</td></tr>
+        <tr><th>Identifiant publicitaire</th><td>Utilisé par Google AdMob pour la diffusion de publicités.</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>4. Partage de données</h2>
+      <p>BoninyDev ne vend, ne loue ni ne partage vos documents, photos ou fichiers avec des tiers. La seule donnée transmise à un tiers est l'identifiant publicitaire mentionné ci-dessus, traité par Google AdMob.</p>
+    </div>
+
+    <div class="card">
+      <h2>5. Sécurité et conservation</h2>
+      <p>Vos documents et fichiers restent sur votre appareil, sous votre contrôle. Vous pouvez les supprimer à tout moment depuis l'onglet « Historique » de l'application, ou directement depuis le gestionnaire de fichiers de votre appareil.</p>
+    </div>
+
+    <div class="card">
+      <h2>6. Vos droits (RGPD)</h2>
+      <p>Si vous résidez dans l'Union européenne, vous disposez de droits d'accès, de rectification, d'effacement, de limitation et d'opposition concernant vos données personnelles. Comme DocSnap ne collecte pas de données personnelles sur des serveurs appartenant à BoninyDev, ces droits s'exercent principalement auprès de Google pour les données traitées via AdMob (voir leur politique de confidentialité ci-dessus).</p>
+      <p>Pour toute question, vous pouvez nous contacter à l'adresse indiquée en bas de cette page.</p>
+    </div>
+
+    <div class="card">
+      <h2>7. Confidentialité des enfants</h2>
+      <p>DocSnap n'est pas destinée aux enfants de moins de 13 ans. BoninyDev ne collecte sciemment aucune donnée concernant des enfants.</p>
+    </div>
+
+    <div class="card">
+      <h2>8. Modifications de cette politique</h2>
+      <p>Cette politique de confidentialité peut être mise à jour de temps à autre. La date de la dernière mise à jour est indiquée en haut de cette page.</p>
+    </div>
+
+    <div class="card">
+      <h2>9. Contact</h2>
+      <p>Pour toute question relative à cette politique ou à l'application DocSnap, contactez-nous à :<br>
+      <strong>📧 contact@boninydev.com</strong></p>
+      <p>Vous pouvez également nous soutenir via <a href="https://paypal.me/BoninyDev" target="_blank" rel="noopener">paypal.me/BoninyDev</a>.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════ ENGLISH ══════════════════════════ -->
+  <div id="content-en">
+    <p class="updated">Last updated: June 14, 2026</p>
+
+    <div class="card">
+      <p>DocSnap (the "App") is developed by <strong>BoninyDev (Boniny Développement)</strong>, an independent developer based in France. This policy explains what information is processed when you use DocSnap, and how it is used.</p>
+    </div>
+
+    <div class="card">
+      <h2>1. No personal data collected by DocSnap</h2>
+      <p>DocSnap works almost entirely on-device:</p>
+      <ul>
+        <li>Photos and documents that you scan, crop, filter or convert are processed directly on your phone.</li>
+        <li>Generated files (PDF, JPG, PNG, WebP, OCR text files) are saved to your device's storage, or to the folder you choose yourself in the app's settings.</li>
+        <li>Your document history is stored locally in a database on your device and is never sent to BoninyDev or to any remote server.</li>
+        <li>Text recognition (OCR) is performed entirely on-device using Google ML Kit, without sending any image to a server.</li>
+        <li>Your preferences (language, accessibility mode, save folder) are stored locally on your device.</li>
+      </ul>
+      <p><strong>BoninyDev has no access to any of this data.</strong></p>
+    </div>
+
+    <div class="card">
+      <h2>2. Advertising (Google AdMob)</h2>
+      <p>DocSnap displays banner ads provided by <strong>Google AdMob</strong>, which allows us to offer the app for free.</p>
+      <p>To display ads, Google AdMob (and its advertising partners) may collect:</p>
+      <ul>
+        <li>Your device's advertising identifier (Advertising ID);</li>
+        <li>General information about your device and app usage, for ad measurement and personalization purposes.</li>
+      </ul>
+      <p>This information is collected and processed by Google in accordance with its own privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+      <p>You can manage your ad preferences (reset or delete your advertising identifier, limit ad tracking) directly in your Android device settings, under <em>Privacy &gt; Ads</em>.</p>
+    </div>
+
+    <div class="card">
+      <h2>3. Permissions used by the app</h2>
+      <table>
+        <tr><th>Permission</th><td>Purpose</td></tr>
+        <tr><th>Camera</th><td>To take photos of your documents.</td></tr>
+        <tr><th>Photos / Storage</th><td>To import images from your gallery and save generated files.</td></tr>
+        <tr><th>Vibration</th><td>For the "hearing-impaired" accessibility mode (haptic feedback instead of sounds).</td></tr>
+        <tr><th>Internet</th><td>Required to load and display AdMob ads.</td></tr>
+        <tr><th>Advertising ID</th><td>Used by Google AdMob to serve ads.</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>4. Data sharing</h2>
+      <p>BoninyDev does not sell, rent, or share your documents, photos, or files with third parties. The only data shared with a third party is the advertising identifier mentioned above, processed by Google AdMob.</p>
+    </div>
+
+    <div class="card">
+      <h2>5. Security and retention</h2>
+      <p>Your documents and files stay on your device, under your control. You can delete them at any time from the "History" tab in the app, or directly from your device's file manager.</p>
+    </div>
+
+    <div class="card">
+      <h2>6. Your rights (GDPR)</h2>
+      <p>If you reside in the European Union, you have rights of access, rectification, erasure, restriction, and objection regarding your personal data. Since DocSnap does not collect personal data on servers owned by BoninyDev, these rights apply mainly to Google for data processed via AdMob (see their privacy policy above).</p>
+      <p>For any questions, you can contact us at the address listed at the bottom of this page.</p>
+    </div>
+
+    <div class="card">
+      <h2>7. Children's privacy</h2>
+      <p>DocSnap is not intended for children under 13. BoninyDev does not knowingly collect any data from children.</p>
+    </div>
+
+    <div class="card">
+      <h2>8. Changes to this policy</h2>
+      <p>This privacy policy may be updated from time to time. The date of the last update is shown at the top of this page.</p>
+    </div>
+
+    <div class="card">
+      <h2>9. Contact</h2>
+      <p>For any question about this policy or the DocSnap app, contact us at:<br>
+      <strong>📧 contact@boninydev.com</strong></p>
+      <p>You can also support development via <a href="https://paypal.me/BoninyDev" target="_blank" rel="noopener">paypal.me/BoninyDev</a>.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  DocSnap — © 2026 BoninyDev (Boniny Développement)
+</footer>
+
+</body>
+</html>
